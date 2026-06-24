@@ -61,7 +61,7 @@ def build_runtime_a2a_agent(adk_agent: BaseAgent, *, description: str) -> A2aAge
     placeholder — Reasoning Engine rewrites it at deploy time) wired to
     :class:`AdkRuntimeA2aExecutor`.
     """
-    project = os.getenv("GOOGLE_CLOUD_PROJECT")
+    project = "create-multi-agent"
     location = os.getenv("GOOGLE_CLOUD_LOCATION") or os.getenv("GOOGLE_CLOUD_REGION")
     if project and location:
         vertexai.init(project=project, location=location)
